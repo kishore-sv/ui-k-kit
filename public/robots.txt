@@ -1,0 +1,9 @@
+# *
+User-agent: *
+Allow: /
+
+# Host
+Host: https://k-kit.kishore-sv.me
+
+# Sitemaps
+Sitemap: https://k-kit.kishore-sv.me/sitemap.xml
