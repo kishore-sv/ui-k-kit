@@ -115,7 +115,7 @@ export default function ContactForm() {
         </div> */}
       </div>
 
-      <div className="flex justify-center items-center w-full h-full bg-neutral-100 text-neutral-900 dark:bg-neutral-800/5 dark:text-neutral-200 rounded-md  ">
+      <div className="flex justify-center items-center w-full h-full  text-neutral-900 dark:text-neutral-200 rounded-md  ">
         <div className="w-[98vw] md:w-[45vw] lg:w-[40vw] 2xl:w-[20vw] min-h-[100vh] lg:min-h-[70vh] flex flex-col items-center gap-15 py-4 px-6   z-20  lg:rounded-xl  lg:border-1 dark:border-neutral-700/50 border-neutral-300/50">
           <form
             onSubmit={handleSubmit}

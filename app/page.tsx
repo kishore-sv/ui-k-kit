@@ -79,19 +79,19 @@ export default function Home() {
           </Link>
         </div>
       </div>
-      <section className=" w-full px-20 py-4 mt-4 flex justify-center items-center  ">
-        <div className=" w-full grid grid-cols-3 px-20 py-4 gap-3 ">
-          <div className="border rounded-xl border-border col-span-1 h-80 w-auto flex flex-col justify-center items-center">
+      <section className=" w-full px-3 md:px-10 lg:px-20 py-4 mt-4 flex justify-center items-center  ">
+        <div className=" w-full grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 px-3 md:px-10 lg:px-20 py-4 gap-3 ">
+          <div className="border rounded-xl border-border px-3 col-span-1 h-80 w-auto flex flex-col justify-center items-center">
             <InputWithMessage />
           </div>
-          <div className="border rounded-xl border-border col-span-2 h-80 w-auto flex flex-col justify-center items-center">
+          <div className="border rounded-xl border-border col-span-1 overflow-scroll md:col-span-2 h-80 w-auto flex flex-col justify-center items-center">
             <ProtfolioNavBar />
           </div>
-          <div className="border rounded-xl border-border col-span-2 h-40 w-auto flex flex-col justify-center items-center">
+          <div className="border rounded-xl border-border col-span-1 md:col-span-2 h-40 w-auto flex flex-col justify-center items-center">
             <div
               ref={inputRef}
               onClick={() => setOpen(true)}
-              className="w-[30%] h-10 flex gap-2 justify-center items-center border border-border rounded-md "
+              className="md:w-[30%] h-10 flex gap-2 justify-center items-center border border-border rounded-md "
             >
               <p className="text-sm text-muted-foreground">
                 This is search model...
@@ -132,13 +132,13 @@ export default function Home() {
             </div>
           </div>
 
-          <div className="border gap-4 rounded-xl border-border col-span-2 h-155 pt-4 w-auto flex flex-col justify-center items-center">
+          <div className="border gap-4 rounded-xl border-border col-span-1 md:col-span-2 h-80 lg:h-155 pt-4 w-auto flex flex-col justify-center items-center">
             <FileUpload />
           </div>
           <div className="border rounded-xl border-border col-span-1 h-fit pt-4 w-auto flex flex-col justify-center items-center">
             <ContactForm />
           </div>
-          <div className="border gap-2 py-3 rounded-xl border-border col-span-1 col-end-3 h-fit pt-4 w-auto flex flex-col justify-center items-center">
+          <div className="border gap-2 py-3 rounded-xl border-border col-span-1 lg:col-end-3 h-fit pt-4 w-auto flex flex-col justify-center items-center">
             <RetroButton name="Retro Button" />
             <RetroButton2 name="Don`t Click me" />
             <ToggleTool />

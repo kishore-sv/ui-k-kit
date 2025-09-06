@@ -176,7 +176,7 @@ export default function InputPage() {
         </button>
       </div>
       <div className="w-full px-2 ">
-        <div className="w-full max-w-2xl overflow-x-scroll min-h-100 h-fit rounded-xl border border-border flex justify-center items-center ">
+        <div className="w-full max-w-2xl px-4 overflow-x-scroll min-h-100 h-fit rounded-xl border border-border flex justify-center items-center ">
           {toggleView === "preview" ? (
             component
           ) : (

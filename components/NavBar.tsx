@@ -4,12 +4,44 @@ import { cn } from "@/lib/utils";
 import Link from "next/link";
 import { useEffect, useRef, useState } from "react";
 import Image from "next/image";
+import RootSearchModal from "./RootSearchModel";
 
 export default function NavBar() {
   const { setTheme, theme } = useTheme();
 
+  const [open, setOpen] = useState<boolean>(false);
+  const inputRef = useRef<HTMLInputElement>(null);
+  const containerRef = useRef<HTMLDivElement | null>(null);
+
+  useEffect(() => {
+    const handleKey = (e: KeyboardEvent) => {
+      console.log("command+k");
+      const isMac = navigator.platform.toUpperCase().includes("MAC");
+      const cmdOrCtrl = isMac ? e.metaKey : e.ctrlKey;
+      if (cmdOrCtrl && e.key.toLowerCase() === "k") {
+        e.preventDefault();
+        setOpen(true);
+        setTimeout(() => inputRef.current?.focus(), 0);
+      }
+
+      if (e.key === "Escape") setOpen(false);
+    };
+
+    const handleClickOutside = (e: MouseEvent) => {
+      if (
+        containerRef.current &&
+        !containerRef.current.contains(e.target as Node)
+      ) {
+        setOpen(false);
+      }
+    };
+
+    window.addEventListener("keydown", handleKey);
+    window.addEventListener("mousedown", handleClickOutside);
+  }, []);
+
   return (
-    <nav className=" w-screen overflow-hidden fixed top-0 h-18 lg:px-14 px-2 py-3 bg-background border-b border-border flex items-center justify-between">
+    <nav className=" w-screen z-[999] overflow-hidden fixed top-0 h-18 lg:px-14 px-2 py-3 bg-background border-b border-border flex items-center justify-between">
       <section className="w-fit h-full flex items-center ">
         <MobileDropdown />
         <Link
@@ -44,7 +76,11 @@ export default function NavBar() {
         </div>
       </section>
       <section className="w-fit h-full flex items-center gap-2 lg:gap-6">
-        <div className=" h-8 w-50 lg:w-60 rounded-md p-2 border border-border flex items-center justify-between ">
+        <div
+          ref={inputRef}
+          onClick={() => setOpen(true)}
+          className=" h-8 w-50 lg:w-60 rounded-md p-2 border border-border flex items-center justify-between "
+        >
           <span className="text-muted-foreground text-xs">
             Search Documentation...
           </span>
@@ -53,6 +89,13 @@ export default function NavBar() {
             <span>K</span>
           </div>
         </div>
+        {!!open && (
+          <RootSearchModal
+            containerRef={containerRef}
+            open={open}
+            setOpen={setOpen}
+          />
+        )}
         <Link
           target="Github"
           href="https://github.com/kishore-sv/ui-k-kit"

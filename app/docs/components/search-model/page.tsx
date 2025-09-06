@@ -63,7 +63,7 @@ export default function SearchModelPage() {
 
   return (
     <div className="w-full p-4">
-      <h1 className=" text-4xl font-bold text-primary">Input</h1>
+      <h1 className=" text-4xl font-bold text-primary">Search Model</h1>
       <p className="mt-3 text-secondary-foreground">
         Displays a Search Model for Web Search of pages,documentation,link etc..
       </p>
@@ -100,7 +100,7 @@ export default function SearchModelPage() {
                 <div
                   ref={inputRef}
                   onClick={() => setOpen(true)}
-                  className="w-[50%] h-10 flex gap-2 justify-center items-center border border-border rounded-md "
+                  className=" w-full lg:w-[50%] h-10 flex gap-2 justify-center items-center border border-border rounded-md "
                 >
                   <p className="text-sm text-muted-foreground">
                     This is search model...

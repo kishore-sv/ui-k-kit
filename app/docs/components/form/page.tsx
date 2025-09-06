@@ -31,7 +31,7 @@ export default function FormPage() {
 
   return (
     <div className="w-full p-4">
-      <h1 className=" text-4xl font-bold text-primary">Input</h1>
+      <h1 className=" text-4xl font-bold text-primary">Form</h1>
       <p className="mt-3 text-secondary-foreground">
         Displays a form with input fields.
       </p>
@@ -62,7 +62,7 @@ export default function FormPage() {
           </button>
         </div>
         <div className="w-full px-2 ">
-          <div className="w-full max-w-2xl overflow-x-scroll min-h-100 h-fit rounded-xl border border-border flex flex-col px-10 py-4 justify-center items-center ">
+          <div className="w-full max-w-2xl overflow-x-scroll min-h-100 h-fit rounded-xl border border-border flex flex-col md:px-10 py-4 justify-center items-center ">
             {toggleView === "preview" ? (
               <ContactForm />
             ) : (

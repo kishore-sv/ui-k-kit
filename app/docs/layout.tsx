@@ -40,7 +40,7 @@ export default function DocsLayout({
 }>) {
   return (
     <div className="w-full min-h-[90vh] h-full overflow-x-scroll md:px-16 flex mt-18 gap-6">
-      <section className="hidden md:block h-full p-4 min-w-[16%] overflow-x-scroll">
+      <section className="hidden md:block h-full p-4 md:min-w-[20%] lg:min-w-[16%] overflow-x-scroll">
         <div className="flex w-full h-fit flex-col gap-1">
           {Links.map((link, idx) => {
             if (link.link === undefined)
@@ -57,8 +57,8 @@ export default function DocsLayout({
           })}
         </div>
       </section>
-      <section className="h-full w-full border-l px-10 border-border ">{children}</section>
-      <section className=" hidden md:block h-full min-w-[18%] py-4 ">
+      <section className="h-full w-full border-l px-2 lg:px-10 border-border ">{children}</section>
+      <section className=" hidden md:block h-full md:min-w-[10%] lg:min-w-[18%] py-4 ">
         {/* <p className="text-secondary-foreground text-sm">On This Page</p> */}
       </section>
     </div>
