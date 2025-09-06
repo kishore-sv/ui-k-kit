@@ -10,34 +10,28 @@ export default function ComponentsPage() {
       </p>
       <div className=" w-full grid grid-cols-1 md:grid-cols-3 mt-3 px-4 space-x-2 space-y-3">
         <Link
-          href="/docs/components/accordion"
+          href="/docs/components/input"
           className=" text-lg font-medium text-primary py-2 hover:underline underline-offset-2 "
         >
-          Accordion
+          Input
         </Link>
          <Link
-          href="/docs/components/accordion"
+          href="/docs/components/nav"
           className=" text-lg font-medium text-primary py-2 hover:underline underline-offset-2 "
         >
-          Alret
+          Nav Bar
         </Link>
          <Link
-         href="/docs/components/accordion"
+         href="/docs/components/search-model"
           className=" text-lg font-medium text-primary py-2 hover:underline underline-offset-2 "
         >
           Search Model
         </Link>
          <Link
-          href="/docs/components/accordion"
+          href="/docs/components/form"
           className=" text-lg font-medium text-primary py-2 hover:underline underline-offset-2 "
         >
-          Terminal
-        </Link>
-         <Link
-         href="/docs/components/accordion"
-          className=" text-lg font-medium text-primary py-2 hover:underline underline-offset-2 "
-        >
-          Somthing
+          Form
         </Link>
       </div>
     </div>

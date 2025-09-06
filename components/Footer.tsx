@@ -3,10 +3,10 @@ import Link from "next/link";
 
 export default function Footer(){
     return(
-         <div className=" flex items-center justify-center border-t border-border w-full pt-2 pb-4  gap-4 bg-background">
+         <div className="flex items-center justify-center border-t border-border w-full pt-2 pb-4 gap-4 bg-background">
               <Link
                 href="https://github.com/kishore-sv"
-                target="_blank"
+                target="Github"
                 className=" opacity-50 hover:opacity-[1] flex justify-center items-center gap-1 transition-opacity ease-in-out  "
               >
                 <GithubIcon className=" w-[1.2rem] h-[1.2rem] shrink-0" />
@@ -15,7 +15,7 @@ export default function Footer(){
 
               <Link
                 href="https://x.com/kishore_sv_7"
-                target="_blank"
+                target="X"
                 className=" opacity-50 hover:opacity-[1] flex justify-center items-center gap-1 transition-opacity ease-in-out  "
               >
                 <svg viewBox="0 0 24 24" className="h-4 w-4 fill-current">

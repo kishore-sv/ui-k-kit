@@ -1,15 +1,15 @@
 "use client";
 import { useTheme } from "next-themes";
-import { Link2, Moon, Sun, SunIcon } from "lucide-react";
 import { cn } from "@/lib/utils";
 import Link from "next/link";
 import { useEffect, useRef, useState } from "react";
+import Image from "next/image";
 
 export default function NavBar() {
   const { setTheme, theme } = useTheme();
 
   return (
-    <nav className=" w-screen overflow-hidden sticky top-0 h-18 lg:px-14 px-2 py-3 bg-background border-b border-border flex items-center justify-between">
+    <nav className=" w-screen overflow-hidden fixed top-0 h-18 lg:px-14 px-2 py-3 bg-background border-b border-border flex items-center justify-between">
       <section className="w-fit h-full flex items-center ">
         <MobileDropdown />
         <Link
@@ -17,7 +17,10 @@ export default function NavBar() {
           title="K-Kit"
           className="hidden lg:w-fit lg:h-[90%] md:flex  items-center transition-colors ease-in-out hover:bg-accent p-1 rounded-md "
         >
-          <img
+          <Image
+            width="50"
+            height="50"
+            loading="lazy"
             src="/logo.svg"
             alt="K-Kit"
             className="h-full w-full object-cover"
@@ -51,7 +54,7 @@ export default function NavBar() {
           </div>
         </div>
         <Link
-          target="_blank"
+          target="Github"
           href="https://github.com/kishore-sv/ui-k-kit"
           title="github-k-kit"
           className=" p-1 rounded-md transition-colors ease-in-out hover:bg-accent "
@@ -154,7 +157,10 @@ export function MobileDropdown() {
               onClick={() => setIsOpen(false)}
               className="w-fit h-[90%] flex  items-center transition-colors ease-in-out hover:bg-accent p-1 rounded-md "
             >
-              <img
+              <Image
+                width="50"
+                height={50}
+                loading="lazy"
                 src="/logo.svg"
                 alt="K-Kit"
                 className="h-full w-full object-cover"

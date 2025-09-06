@@ -1,9 +1,9 @@
 "use client";
 import { FileUpload } from "@/components/myComponents/file-upload";
 import { cn } from "@/lib/utils";
-import { ChangeEvent, useState } from "react";
+import { useState } from "react";
 
-export default function Accordion() {
+export default function InputPage() {
   const [toggleView, setToggleView] = useState<"preview" | "code">("preview");
 
   const defaultCode = `const Input = () => {
@@ -137,7 +137,7 @@ export default function Accordion() {
   );
 }
 
-const CodeBlock = ({
+ export  const CodeBlock = ({
   title,
   code,
   component,
@@ -190,7 +190,7 @@ const CodeBlock = ({
   );
 };
 
-const Input = () => {
+export const Input = () => {
   return (
     <div className="w-fit">
       <label className="block text-sm font-medium mb-1">Email</label>
@@ -207,7 +207,7 @@ const Input = () => {
   );
 };
 
-const InputWithMessage = () => {
+export const InputWithMessage = () => {
   return (
     <div className="w-fit">
       <label className="block text-sm font-medium mb-1">Email</label>
@@ -227,7 +227,7 @@ const InputWithMessage = () => {
   );
 };
 
-const InputDisabled = () => {
+export const InputDisabled = () => {
   const isLoading = true;
   return (
     <div className="w-fit">

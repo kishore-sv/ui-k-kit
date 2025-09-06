@@ -4,7 +4,6 @@ import React, { useRef, useState } from "react";
 import { motion } from "motion/react";
 import { IconUpload } from "@tabler/icons-react";
 import { useDropzone } from "react-dropzone";
-import { useRouter } from "next/navigation";
 
 const mainVariant = {
   initial: {
@@ -35,7 +34,6 @@ export const FileUpload = ({
   const [files, setFiles] = useState<File[]>([]);
   const fileInputRef = useRef<HTMLInputElement>(null);
 
-  const router = useRouter()
 
   const handleFileChange = (newFiles: File[]) => {
     const file = newFiles[0];
@@ -59,7 +57,7 @@ export const FileUpload = ({
     multiple: false,
     noClick: true,
     onDrop: handleFileChange,
-    onDropRejected: (error:any) => {
+    onDropRejected: (error) => {
       console.log(error);
     },
     // accept: {
